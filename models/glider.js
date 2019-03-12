@@ -67,3 +67,5 @@ const Glider = mongoose.model('Glider', {
         minlength: 1
     }
 });
+
+module.exports = { Glider };
