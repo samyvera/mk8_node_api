@@ -3,14 +3,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const { User } = require('./models/user');
+const { Driver } = require('./models/driver');
 const ObjectID = mongoose.Types.ObjectId;
 
 const app = express();
 
 app.use(bodyParser.json());
 
-app.post('/user', (req, res) => new User({ email:req.body.email }).save().then(user => res.send(user)).catch(err => res.status(500).send(err)));
+app.post('/driver', (req, res) => new Driver({ name:req.body.name, size:req.body.size, driverModel:req.body.driverModel }).save().then(Driver => res.send(Driver)).catch(err => res.status(500).send(err)));
 
 app.get('/user', (req, res) => User.find((err, users) => res.json(users)));
 
