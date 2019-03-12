@@ -1,3 +1,4 @@
+const fs = require('fs')
 var driver = [
     {
         name: 'Mario',
@@ -1664,3 +1665,7 @@ var glider = [
         miniturbo: 0.25
     }
 ];
+
+
+const Jdriver = JSON.stringify(driver);
+fs.writeFileSync('driver.json', Jdriver);
