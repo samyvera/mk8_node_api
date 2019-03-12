@@ -1,0 +1,26 @@
+{
+  "name": "node_api",
+  "version": "1.0.0",
+  "description": "Samy VERA\r Adrien VAUCARD\r Tanguy POTIER",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5amyVera/node_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5amyVera/node_api/issues"
+  },
+  "homepage": "https://github.com/5amyVera/node_api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "yargs": "^13.2.2"
+  }
+}
