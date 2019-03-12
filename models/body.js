@@ -67,3 +67,5 @@ const Body = mongoose.model('Body', {
         minlength: 1
     }   
 });
+
+module.exports = { Body };

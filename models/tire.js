@@ -67,3 +67,5 @@ const Tire = mongoose.model('Tire', {
         minlength: 1
     }
 });
+
+module.exports = { Tire };

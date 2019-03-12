@@ -1667,5 +1667,5 @@ var glider = [
 ];
 
 
-const Jgliders = JSON.stringify(glider);
-fs.writeFileSync('gliders.json', Jgliders);
+const Jtire = JSON.stringify(tire);
+fs.writeFileSync('tire.json', Jtire);
