@@ -3,18 +3,28 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-<<<<<<< HEAD
-const { Driver } = require('./models/driver');
-=======
-const { User } = require('./models/driver');
->>>>>>> 853673fc33b637bb83e07ada3220ee96b2cfed80
+const { Gliders } = require('./models/gliders');
 const ObjectID = mongoose.Types.ObjectId;
 
 const app = express();
 
 app.use(bodyParser.json());
 
-app.post('/driver', (req, res) => new Driver({ name:req.body.name, size:req.body.size, driverModel:req.body.driverModel }).save().then(Driver => res.send(Driver)).catch(err => res.status(500).send(err)));
+app.post('/gliders', (req, res) => new Gliders({ 
+    name:req.body.name, 
+    speedGnd:req.body.speedGnd, 
+    speedWtr:req.body.speedWtr,
+    speedAir:req.body.speedAir, 
+    speedGty:req.body.speedGty, 
+    acceleration:req.body.acceleration,
+    weight:req.body.weight, 
+    handlingGnd:req.body.handlingGnd, 
+    handlingWtr:req.body.handlingWtr,
+    handlingAir:req.body.handlingAir, 
+    handlingGty:req.body.handlingGty, 
+    grip:req.body.grip,
+    miniturbo:req.body.miniturbo, 
+}).save().then(Gliders => res.send(Gliders)).catch(err => res.status(500).send(err)));
 
 app.get('/user', (req, res) => User.find((err, users) => res.json(users)));
 
