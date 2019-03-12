@@ -15,8 +15,7 @@ const Driver = mongoose.model('Driver', {
         type: String,
         required: true,
         minlength: 1
-    },
-
+    }
 })
 
 module.exports = { Driver };

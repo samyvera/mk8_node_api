@@ -3,14 +3,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const { Gliders } = require('./models/gliders');
+const { Glider } = require('./models/glider');
 const ObjectID = mongoose.Types.ObjectId;
 
 const app = express();
 
 app.use(bodyParser.json());
 
-app.post('/gliders', (req, res) => new Gliders({ 
+app.post('/gliders', (req, res) => new Glider({ 
     name:req.body.name, 
     speedGnd:req.body.speedGnd, 
     speedWtr:req.body.speedWtr,
@@ -24,7 +24,7 @@ app.post('/gliders', (req, res) => new Gliders({
     handlingGty:req.body.handlingGty, 
     grip:req.body.grip,
     miniturbo:req.body.miniturbo, 
-}).save().then(Gliders => res.send(Gliders)).catch(err => res.status(500).send(err)));
+}).save().then(Glider => res.send(Glider)).catch(err => res.status(500).send(err)));
 
 app.get('/user', (req, res) => User.find((err, users) => res.json(users)));
 
