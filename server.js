@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const { Driver } = require('./models/user');
+const { Driver } = require('./models/driver');
 const ObjectID = mongoose.Types.ObjectId;
 
 const app = express();
@@ -20,12 +20,9 @@ PUT model/id
 */
 
 //driver
-app.get('/driver', (req, res) => Driver.find(drivers).then(drivers => res.json(drivers)).catch(err, res.status(500).send(err)));
-
+app.get('/driver', (req, res) => Driver.find((err, drivers) => err ? res.status(500).send(err) : res.json(drivers)));
 app.get('/driver/:id', (req, res) => ObjectID.isValid(req.params.id) ? Driver.findById(req.params.id).then(driver => driver ? res.json(driver) : res.status(404).send()) : res.status(404).send());
-
 app.post('/driver', (req, res) => new Driver({ name:req.body.name, size:req.body.size, driverModel:req.body.driverModel }).save().then(driver => res.send(driver)).catch(err => res.status(500).send(err)));
-
 app.delete('/driver/:id', (req, res) => ObjectID.isValid(req.params.id) ? Driver.findByIdAndRemove(req.params.id).then(driver => driver ? res.json(driver) : res.status(404).send()) : res.status(404).send());
 
 const port = yargs.argv.port && !isNaN(yargs.argv.port) && yargs.argv.port > 0 && !(yargs.argv.port % 1) ? yargs.argv.port : 3000;
