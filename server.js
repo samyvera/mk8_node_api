@@ -3,7 +3,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+<<<<<<< HEAD
 const { Driver } = require('./models/driver');
+=======
+const { User } = require('./models/driver');
+>>>>>>> 853673fc33b637bb83e07ada3220ee96b2cfed80
 const ObjectID = mongoose.Types.ObjectId;
 
 const app = express();
