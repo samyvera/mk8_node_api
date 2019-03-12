@@ -3,10 +3,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const { Glider } = require('./models/glider');
 const { Body } = require('./models/body');
 const { Driver } = require('./models/driver');
 const { DriverModel } = require('./models/driverModel');
-const { Glider } = require('./models/glider');
 const { Tire } = require('./models/tire');
 const ObjectID = mongoose.Types.ObjectId;
 
