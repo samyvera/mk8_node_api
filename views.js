@@ -1667,5 +1667,5 @@ var glider = [
 ];
 
 
-const Jdriver = JSON.stringify(driver);
-fs.writeFileSync('driver.json', Jdriver);
+const Jtire = JSON.stringify(tire);
+fs.writeFileSync('tire.json', Jtire);
