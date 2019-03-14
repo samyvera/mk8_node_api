@@ -27,7 +27,7 @@ A driver ressource is a character you can play in the game.
 
 ### Example Response:
 
-```
+```json
 {
    "_id":"5c8783a190789c5b64f2c72c",
    "name":"Luigi",
@@ -64,7 +64,7 @@ A body ressource is a vehicle you can choose in the game.
 
 ### Example Response:
 
-```
+```json
 {
    "_id":"5c8788adc51dfa04d4a5babe",
    "name":"Mr Scooty",
@@ -121,7 +121,7 @@ A tire ressource is a part of vehicle you can choose in the game.
 
 ### Example Response:
 
-```
+```json
 {
    "_id":"5c878ca2c16b4820283161e3",
    "name":"Button",
@@ -178,7 +178,7 @@ A glider ressource is a glider, attach to a vehicle you can choose in the game.
 
 ### Example Response:
 
-```
+```json
 {
    "_id":"5c878ac532e4724f4c4dd477",
    "name":"Super Glider",
@@ -225,7 +225,7 @@ This API supports CRUD requests. You can make GET, POST, PUT and DELETE requests
 
 `POST http://127.0.0.1:3000/glider`
 
-```
+```json
 {
     "name" : "Diddy Kong",
     "driverModel" : "LightDriverModel"
