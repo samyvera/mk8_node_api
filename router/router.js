@@ -42,4 +42,11 @@ app.get('/glider/:id', controller.getGliderById);
 app.post('/glider', controller.addGlider);
 app.delete('/glider/:id', controller.delGlider);
 
+//Driver Model Routes
+app.get('/driverModel', controller.getDriverModel);
+app.get('/driverModel/:id', controller.getDriverModelById);
+app.post('/driverModel', controller.addDriverModel);
+app.delete('/driverModel/:id', controller.delDriverModel);
+
+
 module.exports = { app };

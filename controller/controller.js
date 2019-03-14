@@ -35,6 +35,12 @@ const getGliderById = (req, res) => ObjectID.isValid(req.params.id) ? Glider.fin
 const addGlider = (req, res) => new Glider(type(req, "gliderType")).save().then(glider => res.send(glider)).catch(err => res.status(500).send(err));
 const delGlider = (req, res) => ObjectID.isValid(req.params.id) ? Glider.findByIdAndRemove(req.params.id).then(glider => glider ? res.json(glider) : res.status(404).send()) : res.status(404).send();
 
+//Glider Methods
+const getDriverModel = (req, res) => DriverModel.find((err, driverModels) => err ? res.status(500).send(err) : res.json(driverModels));
+const getDriverModelById = (req, res) => ObjectID.isValid(req.params.id) ? DriverModel.findById(req.params.id).then(driverModel => driverModel ? res.json(driverModel) : res.status(404).send()) : res.status(404).send();
+const addDriverModel = (req, res) => new DriverModel(type(req, "driverModelType")).save().then(driverModel => res.send(driverModel)).catch(err => res.status(500).send(err));
+const delDriverModel = (req, res) => ObjectID.isValid(req.params.id) ? DriverModel.findByIdAndRemove(req.params.id).then(driverModel => driverModel ? res.json(driverModel) : res.status(404).send()) : res.status(404).send();
+
 module.exports = {
     getDriver,
     getDriverById,
@@ -51,5 +57,9 @@ module.exports = {
     getGlider,
     getGliderById,
     addGlider,
-    delGlider
+    delGlider,
+    getDriverModel,
+    getDriverModelById,
+    addDriverModel,
+    delDriverModel
 }
