@@ -232,19 +232,12 @@ This API supports CRUD requests. You can make GET, POST, PUT and DELETE requests
 }
 ```
 
+************
+
+Contributors :
+
+  * Samy VERA
+  * Tanguy POTIER
+  * Adrien VAUCARD
 
 
-
-
-
-
-
-
-
-
-
-
-
-Samy VERA
-Adrien VAUCARD
-Tanguy POTIER

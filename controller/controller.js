@@ -10,6 +10,8 @@ const { DriverModel } = require('../models/driverModel');
 const { Tire } = require('../models/tire');
 const { type } = require('../types/types');
 
+//Home Methods
+// const getHome = (req, res) => Driver.find((err, drivers) => err ? res.status(500).send(err) : res.json(drivers));
 
 //Driver Methods
 const getDriver = (req, res) => Driver.find((err, drivers) => err ? res.status(500).send(err) : res.json(drivers));
@@ -39,7 +41,7 @@ const delGlider = (req, res) => ObjectID.isValid(req.params.id) ? Glider.findByI
 const getDriverModel = (req, res) => DriverModel.find((err, driverModels) => err ? res.status(500).send(err) : res.json(driverModels));
 const getDriverModelById = (req, res) => ObjectID.isValid(req.params.id) ? DriverModel.findById(req.params.id).then(driverModel => driverModel ? res.json(driverModel) : res.status(404).send()) : res.status(404).send();
 const addDriverModel = (req, res) => new DriverModel(type(req, "driverModelType")).save().then(driverModel => res.send(driverModel)).catch(err => res.status(500).send(err));
-const delDriverModel = (req, res) => ObjectID.isValid(req.params.id) ? DriverModel.findByIdAndRemove(req.params.id).then(driverModel => driverModel ? res.json(driverModel) : res.status(404).send()) : res.status(404).send();
+// const delDriverModel = (req, res) => ObjectID.isValid(req.params.id) ? DriverModel.findByIdAndRemove(req.params.id).then(driverModel => driverModel ? res.json(driverModel) : res.status(404).send()) : res.status(404).send();
 
 module.exports = {
     getDriver,
@@ -61,5 +63,5 @@ module.exports = {
     getDriverModel,
     getDriverModelById,
     addDriverModel,
-    delDriverModel
+    // delDriverModel
 }

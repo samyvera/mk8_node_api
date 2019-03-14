@@ -18,6 +18,8 @@ DELETE model/id
 PUT model/id
 */
 
+app.get('/', controller.getDriver);
+
 //Driver Routes
 app.get('/driver', controller.getDriver);
 app.get('/driver/:id', controller.getDriverById);
@@ -46,7 +48,7 @@ app.delete('/glider/:id', controller.delGlider);
 app.get('/driverModel', controller.getDriverModel);
 app.get('/driverModel/:id', controller.getDriverModelById);
 app.post('/driverModel', controller.addDriverModel);
-app.delete('/driverModel/:id', controller.delDriverModel);
+// app.delete('/driverModel/:id', controller.delDriverModel);
 
 
 module.exports = { app };
