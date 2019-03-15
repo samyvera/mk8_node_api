@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2019-03-14T14:02:01.074Z",
+	"__export_date": "2019-03-15T12:53:07.298Z",
 	"__export_source": "insomnia.desktop.app:v6.3.2",
 	"resources": [
 		{
@@ -172,14 +172,23 @@
 		{
 			"_id": "req_23d5b5605d1c42468c18074f32bb1bfc",
 			"authentication": {},
-			"body": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
 			"created": 1552571310589,
 			"description": "",
-			"headers": [],
+			"headers": [
+				{
+					"id": "pair_444b28b8af7e4f53b0056c75f5437cd6",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
 			"isPrivate": false,
 			"metaSortKey": -1552571310589,
 			"method": "GET",
-			"modified": 1552571323033,
+			"modified": 1552653888754,
 			"name": "GET Body",
 			"parameters": [],
 			"parentId": "fld_74f22029d9f5402d947303143e180702",
@@ -189,7 +198,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "127.0.0.1:3000/body/5c878502c51dfa04d4a5baa1",
+			"url": "127.0.0.1:3000/body/5c8b9dc79e314c2a50b73647",
 			"_type": "request"
 		},
 		{
@@ -213,6 +222,38 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "localhost:3000/body/5c8a5bf1ecd9182d5c5adc57",
+			"_type": "request"
+		},
+		{
+			"_id": "req_95e3bec3a41c49d5957c19669c924bbc",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"_id\": \"5c8b9dc79e314c2a50b73647\",\n  \"name\": \"Body essaie put\",\n  \"speedGnd\": -0.5,\n  \"speedWtr\": 0,\n  \"speedAir\": -0.5,\n  \"speedGty\": -0.5,\n  \"acceleration\": 0.5,\n  \"weight\": -0.25,\n  \"handlingGnd\": 0.5,\n  \"handlingWtr\": 0.5,\n  \"handlingAir\": -0.25,\n  \"handlingGty\": 0.25,\n  \"grip\": 0.25,\n  \"miniturbo\": 0.5,\n  \"__v\": 0\n}"
+			},
+			"created": 1552653527887,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_3c4a97ef9d8c489bb034de206396aeec",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1552571091811,
+			"method": "PUT",
+			"modified": 1552653854172,
+			"name": "PUT Body",
+			"parameters": [],
+			"parentId": "fld_74f22029d9f5402d947303143e180702",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "127.0.0.1:3000/body/5c8b9dc79e314c2a50b73647",
 			"_type": "request"
 		},
 		{
@@ -317,11 +358,34 @@
 			"_type": "request"
 		},
 		{
+			"_id": "req_425bd7642bde49988df9d00286509550",
+			"authentication": {},
+			"body": {},
+			"created": 1552653537882,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1552653537882,
+			"method": "PUT",
+			"modified": 1552653537882,
+			"name": "PUT Drivers",
+			"parameters": [],
+			"parentId": "fld_33181083b353494cabe870c636a5679d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "",
+			"_type": "request"
+		},
+		{
 			"_id": "req_c1a04366c49c47b496741ea4055cf7c3",
 			"authentication": {},
 			"body": {
 				"mimeType": "application/json",
-				"text": "{\n        \"name\": \"Test\",\n        \"size\": \"Small\",\n        \"speedGnd\": 4.75,\n        \"speedWtr\": 5,\n        \"speedAir\": 5.25,\n        \"speedGty\": 4.5,\n        \"acceleration\": 3,\n        \"weight\": 4.5,\n        \"handlingGnd\": 2.5,\n        \"handlingWtr\": 2,\n        \"handlingAir\": 2.5,\n        \"handlingGty\": 2.5,\n        \"grip\": 3,\n        \"miniturbo\": 2.75,\n        \"active\": false\n    }"
+				"text": "{\n        \"name\": \"Test\",\n        \"size\": \"Small\",\n        \"speedGnd\": 4.75,\n        \"speedWtr\": 5,\n        \"speedAir\": 5.25,\n        \"speedGty\": 4.5,\n        \"acceleration\": 3,\n        \"weight\": 4.5,\n        \"handlingGnd\": 2.5,\n        \"handlingWtr\": 2,\n        \"handlingAir\": 2.5,\n        \"handlingGty\": 2.5,\n        \"grip\": 3,\n        \"miniturbo\": 2.75,\n        \"active\": false\n }"
 			},
 			"created": 1552568065566,
 			"description": "",
@@ -335,7 +399,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1552570700702.5,
 			"method": "POST",
-			"modified": 1552571177229,
+			"modified": 1552654048274,
 			"name": "POST DriverModel",
 			"parameters": [],
 			"parentId": "fld_56e197cdd459481e933865016634c4e8",
@@ -381,7 +445,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1552571510850,
 			"method": "GET",
-			"modified": 1552571567395,
+			"modified": 1552654303906,
 			"name": "GET DriverModel",
 			"parameters": [],
 			"parentId": "fld_56e197cdd459481e933865016634c4e8",
@@ -391,7 +455,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "127.0.0.1:3000/driverModel/5c8a5038496be115c4848061",
+			"url": "127.0.0.1:3000/driverModel/5c8a50b1496be115c484806f",
 			"_type": "request"
 		},
 		{
@@ -415,6 +479,38 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "localhost:3000/driverModel/5c8a5ce1ecd9182d5c5adc5b",
+			"_type": "request"
+		},
+		{
+			"_id": "req_9323912578cd48caa5a10108e248ee59",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"active\": false,\n    \"_id\": \"5c8a5ce1ecd9182d5c5adc5b\",\n    \"name\": \"Test put\",\n    \"size\": \"Small\",\n    \"speedGnd\": 4.75,\n    \"speedWtr\": 5,\n    \"speedAir\": 5.25,\n    \"speedGty\": 4.5,\n    \"acceleration\": 3,\n    \"weight\": 4.5,\n    \"handlingGnd\": 2.5,\n    \"handlingWtr\": 2,\n    \"handlingAir\": 2.5,\n    \"handlingGty\": 2.5,\n    \"grip\": 3,\n    \"miniturbo\": 2.75,\n    \"__v\": 0\n  }"
+			},
+			"created": 1552653555967,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_1305a07080594066abdfc2c2f7118c10",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1552570700677.5,
+			"method": "PUT",
+			"modified": 1552654104210,
+			"name": "PUT DriverModels",
+			"parameters": [],
+			"parentId": "fld_56e197cdd459481e933865016634c4e8",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "127.0.0.1:3000/driverModel/5c8a5ce1ecd9182d5c5adc5b",
 			"_type": "request"
 		},
 		{
@@ -507,6 +603,38 @@
 			"method": "DELETE",
 			"modified": 1552571682377,
 			"name": "DELETE Glider",
+			"parameters": [],
+			"parentId": "fld_776e0adcd9f147a88e13f6ee0efe44d1",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "127.0.0.1:3000/glider/5c8a5d1eecd9182d5c5adc5d",
+			"_type": "request"
+		},
+		{
+			"_id": "req_6ae367fa0d804a8f9bfa0b8eb2d175f4",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"_id\": \"5c8a5d1eecd9182d5c5adc5d\",\n    \"name\": \"Test put\",\n    \"speedGnd\": -0.25,\n    \"speedWtr\": 0,\n    \"speedAir\": -0.25,\n    \"speedGty\": 0.25,\n    \"acceleration\": 0.25,\n    \"weight\": -0.25,\n    \"handlingGnd\": 0,\n    \"handlingWtr\": 0,\n    \"handlingAir\": 0.25,\n    \"handlingGty\": 0,\n    \"grip\": 0,\n    \"miniturbo\": 0.25,\n    \"__v\": 0\n  }"
+			},
+			"created": 1552653579635,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_7a578a549d8746e1847422c0778f4a84",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1552570700671.25,
+			"method": "PUT",
+			"modified": 1552654160521,
+			"name": "PUT Gliders",
 			"parameters": [],
 			"parentId": "fld_776e0adcd9f147a88e13f6ee0efe44d1",
 			"settingDisableRenderRequestBody": false,
@@ -617,6 +745,38 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "127.0.0.1:3000/tire/5c8a5da6ecd9182d5c5adc5f",
+			"_type": "request"
+		},
+		{
+			"_id": "req_1fd7a265df944572a68b6e781e7fccf5",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"_id\": \"5c8b9f799e314c2a50b73649\",\n  \"name\": \"Test put\",\n  \"speedGnd\": -0.25,\n  \"speedWtr\": -0.25,\n  \"speedAir\": -0.25,\n  \"speedGty\": 0,\n  \"acceleration\": 0.25,\n  \"weight\": -0.5,\n  \"handlingGnd\": 0,\n  \"handlingWtr\": 0,\n  \"handlingAir\": -0.25,\n  \"handlingGty\": 0.25,\n  \"grip\": -0.5,\n  \"miniturbo\": 0.5,\n  \"__v\": 0\n}"
+			},
+			"created": 1552653601732,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_6549a98bbc864867bc54c747271dc3bd",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1552570700665,
+			"method": "PUT",
+			"modified": 1552654219868,
+			"name": "PUT Tire",
+			"parameters": [],
+			"parentId": "fld_c40704fd6eaf4519ab70c5bb60c62c06",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "127.0.0.1:3000/tire/5c8b9f799e314c2a50b73649",
 			"_type": "request"
 		}
 	]
